@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @mintefk
 - 👀 I’m interested in Web Development and Machine Learning 
-- 💞️ I’m looking to collaborate on difrent Projects 
+- 💞️ I’m looking to collaborate on diffrent Projects 
   
 
 <!---

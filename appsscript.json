@@ -1,0 +1,15 @@
+{
+  "timeZone": "Europe/Bucharest",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "LibGW",
+        "version": "1",
+        "libraryId": "1ADmXwYspbm30Cd9hEu0OdpKOQbMG2HFoMRaxUT752smiwdd5LYIhz9IZ",
+        "developmentMode": false
+      }
+    ]
+  }
+}

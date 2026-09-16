@@ -5,6 +5,73 @@ function master_setup() {
 }
 
 /**
+ * Sterge toate trigger-ele instalabile ale proiectului Apps Script curent.
+ *
+ * retVal:
+ * - {
+ *     retCode: LibRetCodeType,
+ *     retVal: {
+ *       foundCount: number,
+ *       deletedCount: number,
+ *       failedCount: number,
+ *       failedTriggers: Array
+ *     },
+ *     retMsg: string
+ *   }
+ */
+function stergeToateTriggerele() {
+  let triggers = [];
+  let deletedCount = 0;
+  const failedTriggers = [];
+
+  try {
+    triggers = ScriptApp.getProjectTriggers();
+
+    for (const trigger of triggers) {
+      try {
+        ScriptApp.deleteTrigger(trigger);
+        deletedCount++;
+      }
+      catch (err) {
+        failedTriggers.push({
+          handlerFunction: trigger.getHandlerFunction(),
+          eventType: String(trigger.getEventType()),
+          error: String(err)
+        });
+      }
+    }
+
+    const retVal = {
+      foundCount: triggers.length,
+      deletedCount: deletedCount,
+      failedCount: failedTriggers.length,
+      failedTriggers: failedTriggers
+    };
+
+    if (failedTriggers.length > 0) {
+      const retMsg = "Nu au putut fi sterse " + failedTriggers.length + " din " + triggers.length + " trigger-e";
+      LibGW.Log(LibLogType.Error, "stergeToateTriggerele: " + retMsg + ": " + JSON.stringify(failedTriggers));
+      return { retCode: LibRetCodeType.Eroare, retVal, retMsg };
+    }
+
+    const retMsg = "Au fost sterse toate trigger-ele instalabile ale proiectului: " + deletedCount;
+    LibGW.Log(LibLogType.Log, "stergeToateTriggerele: " + retMsg);
+    return { retCode: LibRetCodeType.Succes, retVal, retMsg };
+  }
+  catch (err) {
+    const retVal = {
+      foundCount: triggers.length,
+      deletedCount: deletedCount,
+      failedCount: failedTriggers.length,
+      failedTriggers: failedTriggers
+    };
+    const retMsg = "Nu a putut fi obtinuta sau procesata lista trigger-elor proiectului";
+    LibGW.Log(LibLogType.Error, "stergeToateTriggerele: " + retMsg + ": " + err.stack);
+    return { retCode: LibRetCodeType.Eroare, retVal, retMsg };
+  }
+}
+
+/**
  * Instaleaza trigger-ul onFormSubmit pentru formularul curent.
  *
  * Input:
@@ -569,4 +636,3 @@ function onSpreadsheetEdit_PreluareBeneficiari(e) {
     }
   }
 }
-

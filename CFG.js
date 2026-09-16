@@ -89,7 +89,7 @@ const CFG =
 
   FORMS:
   {
-    FORM_ID: "1pCPRuRVx443ie9EPIk2HLOEPhjIDIiN_DXkmqm25n9M",
+    FORM_ID: "1jcp3oUJu_MHZgBiF86fm1j9Ko9OdG7vqFTkO46F3e5U",
     FORM_RESPONSES_HDR:
     {
       TIMESTAMP: "Timestamp",
@@ -101,11 +101,11 @@ const CFG =
       NUMAR_DE_TELEFON: "Număr de telefon",
       TIP_SEDINTE: "Preferați ședințele online sau fizic?\n\nUnele persoane doresc și/sau sunt obligate de situație să participe doar online sau fizic la întâlniri. Acest lucru este valabil și pentru psihoterapeuții din echipă.",
       IN_AFARA_ORASULUI: "Locuiți în afara orașului Cluj-Napoca?",
-      DESCRIERE_MOTIV: "Oferiți o scurtă descriere a motivului pentru care aveți nevoie de sprijin:",
-      INTERVALE_LIBERE_PROGRAM: `Care sunt intervalele dvs. libere/flexibile din program (excepție weekend - nu suntem disponibili)? (Această întrebare are scopul de a evalua disponibilitatea, respectiv restricțiile dvs. de program, pentru a gestiona mai bine alocarea unui terapeut din echipă. Terapeuții din echipă au programe diferite de lucru, și împărțirea spațiul fizic de lucru impune anumite restricții)
+      DESCRIERE_MOTIV: "Oferiți o scurtă descriere a motivului pentru care aveți nevoie de sprijin: ",
+      INTERVALE_LIBERE_PROGRAM: ` Care sunt intervalele dvs. libere/flexibile din program (excepție weekend - nu suntem disponibili)? (Această întrebare are scopul de a evalua disponibilitatea, respectiv restricțiile dvs. de program, pentru a gestiona mai bine alocarea unui terapeut din echipă. Terapeuții din echipă au programe diferite de lucru, și împărțirea spațiul fizic de lucru impune anumite restricții)
 
-*Se pot bifa mai multe intervale`,
-      DONATIE: "Misiunea organizației noastre este de a ajuta în mod prioritar grupurile dezavantajate socio-economic. În acest sens, avem un sistem de evaluare personală a resurselor de venit pentru stabilirea categoriei de donație pentru ședințele de psihoterapie. Vă rugăm să evaluați suma resurselor financiare lunare de care dispuneți în prezent (venit net lunar, sprijin financiar din partea unui membru al familiei, economii, burse academice, venituri neimpozabile, etc.), și să alegeți donația în care vă încadrați. Prin alegerea donației declarați faptul că ați luat la cunoștință scopul sistemului de evaluare personală.",
+*Se pot bifa mai multe intervale `,
+      DONATIE: "Misiunea organizației noastre este de a ajuta în mod prioritar grupurile dezavantajate socio-economic. În acest sens, avem un sistem de evaluare personală a resurselor de venit pentru stabilirea categoriei de donație pentru ședințele de psihoterapie. Vă rugăm să evaluați suma resurselor financiare lunare de care dispuneți în prezent (venit net lunar, sprijin financiar din partea unui membru al familiei, economii, burse academice, venituri neimpozabile, etc.), și să alegeți donația în care vă încadrați. Prin alegerea donației declarați faptul că ați luat la cunoștință scopul sistemului de evaluare personală. ",
       DIAGNOSTIC: "Aveți un diagnostic psihiatric și/sau urmați un tratament medicamentos? (Dacă răspunsul este DA la oricare din cele două întrebări, vă rugăm detaliați)",
       DE_UNDE_ATI_AUZIT_DE_NOI: "De unde ați auzit/ știți de noi?",
       ALTE_INFORMATII: "Alte informații pe care doriți să ni le transmiteți? (ex. preferințe pentru psihologul cu care veți lucra sau limba - maghiară/ engleză)"
